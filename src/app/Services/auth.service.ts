@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +13,13 @@ userData:any;
   constructor(private _HttpClient:HttpClient,private _Router:Router) { }
 
   setRegister(userData:any):Observable<any>{
-      return this._HttpClient.post(`https://localhost:44377/api/Account/register`,userData);
+      return this._HttpClient.post(`${environment.baseURL}/api/Account/register`,userData);
     
   }
 
   setLogIn(userData:any):Observable<any>
   {
-    return this._HttpClient.post(`https://localhost:44377/api/Account/log-in`, userData)
+    return this._HttpClient.post(`${environment.baseURL}/api/Account/log-in`, userData)
   }
 
   decodeUserData()
