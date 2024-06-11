@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let project of projects">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">{{ project.title }}</h5>
+          </div>
+          <div class="card-body">
+            <img class="card-img-top" src="{{ project.img }}" alt="Project Image">
+            <p class="card-text">{{ project.description }}</p>
+            <p class="card-text">Funding Goal: {{ project.fundingGoal }}</p>
+            <p class="card-text">Amount Raised: {{ project.amountRaised }}</p>
+            <p class="card-text">State: {{ project.state }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

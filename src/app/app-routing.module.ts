@@ -11,6 +11,8 @@ import { UserAccountTypeComponent } from './Components/user-account-type/user-ac
 import { UserAccountTypeLayoutComponent } from './Components/user-account-type-layout/user-account-type-layout.component';
 import { CharityRegisterComponent } from './Components/charity-register/charity-register.component';
 import { CorporateRegisterComponent } from './Components/corporate-register/corporate-register.component';
+import { ProjectComponent } from './Components/project/project.component';
+import { CharityComponent } from './Components/charity/charity.component';
 
 const routes: Routes = [
   {path:'',component:UserAccountTypeLayoutComponent,children:[
@@ -25,6 +27,8 @@ const routes: Routes = [
    ]},
   {path:'',component:BlankLayoutComponent,children:[
     {path:'home',component:HomeComponent},
+    {path:'project',component:ProjectComponent},
+    {path:'charity', component:CharityComponent},
     {path:'logout',component:LogoutComponent},
   ]},
  {path:'**',component:NotFoundComponent}

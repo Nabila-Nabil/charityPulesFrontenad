@@ -11,7 +11,7 @@ import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { BlankNavbarComponent } from './Components/blank-navbar/blank-navbar.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, withFetch } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './Components/home/home.component';
 import { LogoutComponent } from './Components/logout/logout.component';
@@ -23,6 +23,9 @@ import { CharityRegisterComponent } from './Components/charity-register/charity-
 import { CorporateRegisterComponent } from './Components/corporate-register/corporate-register.component';
 import { NavCorporateRegisterComponent } from './Components/nav-corporate-register/nav-corporate-register.component';
 import { NavCharityRegisterComponent } from './Components/nav-charity-register/nav-charity-register.component';
+import { ProjectComponent } from './Components/project/project.component';
+import { CharityComponent } from './Components/charity/charity.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { NavCharityRegisterComponent } from './Components/nav-charity-register/n
     CharityRegisterComponent,
     CorporateRegisterComponent,
     NavCorporateRegisterComponent,
-    NavCharityRegisterComponent
+    NavCharityRegisterComponent,
+    ProjectComponent,
+    CharityComponent
   ],
   imports: [
     BrowserModule,
